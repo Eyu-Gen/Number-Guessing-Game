@@ -1,0 +1,130 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --primaryColor: orange;
+    --defaultColor: white;
+    --darkColor: rgb(9, 9, 9);
+    --primaryFont: Signika;
+    --secondaryFont: Playwrite DK Uloopet;
+}
+
+.imageSection{
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+}
+
+.center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body{
+    min-height: 100vh;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+main{
+    display: flex;
+    font-family: var(--primaryFont);
+    position: relative;
+}
+
+.creator{
+    position: absolute;
+    font-family: var(--secondaryFont);
+    top: 10px;
+    left: 50%;
+    transform: translate(-50%);
+    text-decoration: underline;
+}
+
+.container{
+    padding: 50px;
+    width: 50%;
+    height: 100vh;
+    flex-direction: column;
+
+    .subHeading{
+        text-decoration: underline;
+    }
+}
+
+.leftContainer{
+    background-color: var(--primaryColor);
+    color: var(--darkColor);
+    text-align: center;
+    
+    #numberRange{
+        font-size: 50px;
+        font-weight: bold;
+        margin: 20px;
+    }
+
+    .levelContainer{
+        margin-top: 30px;
+        display: flex;
+        align-items: center;
+        text-align: left;
+        width: 100%;
+
+        .imageSection{
+            width: 50%;
+        }
+
+
+        .levels{
+            display: flex;
+            flex-direction: column;
+
+            .heading{
+                margin-bottom: 10px;
+            }
+    
+            .levelRadio{
+                font-size: 30px;
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+.rightContainer{
+    input[type="text"] {
+        width: 50%;
+        height: 40px;
+        padding: 10px;
+        border: 2px solid var(--darkColor);
+        border-radius: 20px;
+        margin-bottom: 50px;
+    }
+
+    #guessBtn{
+        padding: 10px 20px;
+        border-radius: 10px 0px;
+        border: none;
+        background-color: var(--primaryColor);
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 30px;
+    }
+
+    #hints{
+        margin-bottom: 20px;
+    }
+
+    #hints,
+    #guessNumber{
+        font-size: 30px;
+        font-weight: bold;
+        color: var(--primaryColor);
+    }
+}

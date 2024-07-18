@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+DK+Uloopet:wght@100..400&family=Signika:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="icon" type="images/png" href="images/favivon.png">
+    <link rel="stylesheet" href="style.css">
+    <title>Guess It</title>
+</head>
+<body>
+    <main>
+        <p class="creator">Yugin Paudel</p>
+        <div class="leftContainer container center">
+            <h1 class="subHeading">Guess The Number</h1>
+            <p id="numberRange">1 to 10</p>
+            <h2>You have ten guesses. <br> Can you figure out what it is?</h2>
+            
+            <div class="levelContainer">
+                <div class="imageSection">
+                    <img src="images/thinking-dog.png" alt="">
+                </div>
+
+                <div class="levels">
+                    <h2 class="subHeading">Select Difficulty:</h2>
+                    <label class="levelRadio" for="easy">
+                        <input type="radio" id="easy" name="level" checked> Easy
+                    </label>
+                    <label class="levelRadio" for="medium">
+                        <input type="radio" id="medium" name="level" > Medium
+                    </label>
+                    <label class="levelRadio" for="hard">
+                        <input type="radio" id="hard" name="level" > Hard
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="rightContainer container center">
+            <input type="text" placeholder="Enter your guess here...">
+            <button id="guessBtn">Guess</button>
+            <h2 class="subHeading">Hints:</h2>
+            <h5 id="hints">Enter number first.</h5>
+            <h2 class="subHeading">Guesses left:</h2><div id="guessNumber">10</div>
+        </div>
+
+        <div class="winnerContainer">
+            
+        </div>
+    </main>
+</body>
+</html>
