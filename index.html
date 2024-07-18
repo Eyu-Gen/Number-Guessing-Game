@@ -11,6 +11,7 @@
     <title>Guess It</title>
 </head>
 <body>
+    <div class="blurMain"></div>
     <main>
         <p class="creator">Yugin Paudel</p>
         <div class="leftContainer container center">
@@ -40,14 +41,15 @@
 
         <div class="rightContainer container center">
             <input type="text" placeholder="Enter your guess here...">
-            <button id="guessBtn">Guess</button>
+            <button class="button" id="guessBtn">Guess</button>
             <h2 class="subHeading">Hints:</h2>
             <h5 id="hints">Enter number first.</h5>
             <h2 class="subHeading">Guesses left:</h2><div id="guessNumber">10</div>
         </div>
 
-        <div class="winnerContainer">
-            
+        <div class="winnerContainer center">
+            <p class="heading">You Won!!</p>
+            <button class="button" id="playAgainBtn">Play Again</button>
         </div>
     </main>
 </body>
