@@ -35,13 +35,20 @@
     font-size: 20px;
     font-weight: bold;
     margin-bottom: 30px;
+    transition: opacity 0.2s linear;
+
+    &:hover{
+        cursor: pointer;
+        opacity: 70%;
+    }
 }
 
 body{
     min-height: 100vh;
-    max-width: 1440px;
+    max-width: 1600px;
     margin: 0 auto;
     position: relative;
+    user-select: none;
 }
 
 main{
@@ -54,9 +61,7 @@ main{
     position: absolute;
     font-family: var(--secondaryFont);
     top: 10px;
-    left: 50%;
-    transform: translate(-50%);
-    text-decoration: underline;
+    right: 20px;
 }
 
 .container{
@@ -115,6 +120,12 @@ main{
             .levelRadio{
                 font-size: 30px;
                 font-weight: bold;
+                transition: opacity 0.2s linear;
+
+                &:hover{
+                    cursor: pointer;
+                    opacity: 50%;
+                }
             }
         }
     }
@@ -123,14 +134,19 @@ main{
 .rightContainer{
     background-color: var(--defaultColor);
 
-    input[type="text"] {
+    #suggestion{
+        margin-bottom: 20px;
+        color: var(--primaryColor);
+    }
+
+    input[type="number"] {
         width: 50%;
         height: 40px;
         padding: 10px;
         border: 2px solid var(--darkColor);
         border-radius: 20px;
         margin-bottom: 50px;
-    }
+    }   
 
     #hints{
         margin-bottom: 20px;
@@ -144,25 +160,34 @@ main{
     }
 }
 
-.winnerContainer{
+.outputContainer{
     position: absolute;
     width: 30%;
     flex-direction: column;
     gap: 30px;
     padding: 50px;
-    background-image: url(images/celebration.gif);
-    background-size: cover; 
-    background-repeat: no-repeat;
-    background-position: bottom;
     border-radius: 20px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1;
-    display: none;
+    box-shadow: 1px 1px 10px var(--darkColor);
 
     .heading{
         font-size: 50px;
         font-weight: bold;
     }
+}
+
+#winnerContainer{
+    background-image: url(images/celebration.gif);
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: bottom;
+    display: none;
+}
+
+#tryAgainContainer{
+    display: none;
+    background-color: var(--defaultColor);
 }

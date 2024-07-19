@@ -8,15 +8,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Playwrite+DK+Uloopet:wght@100..400&family=Signika:wght@300..700&display=swap" rel="stylesheet">
     <link rel="icon" type="images/png" href="images/favivon.png">
     <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
     <title>Guess It</title>
 </head>
 <body>
-    <div class="blurMain"></div>
+    <div class="blurMain" id="blurMain"></div>
     <main>
-        <p class="creator">Yugin Paudel</p>
+        <p class="creator">yugin_paudel</p>
         <div class="leftContainer container center">
             <h1 class="subHeading">Guess The Number</h1>
-            <p id="numberRange">1 to 10</p>
+            <p id="numberRange">-</p>
             <h2>You have ten guesses. <br> Can you figure out what it is?</h2>
             
             <div class="levelContainer">
@@ -27,29 +28,35 @@
                 <div class="levels">
                     <h2 class="subHeading">Select Difficulty:</h2>
                     <label class="levelRadio" for="easy">
-                        <input type="radio" id="easy" name="level" checked> Easy
+                        <input type="radio" id="easy" value="easy" name="level"> Easy
                     </label>
                     <label class="levelRadio" for="medium">
-                        <input type="radio" id="medium" name="level" > Medium
+                        <input type="radio" id="medium" value="medium" name="level" > Medium
                     </label>
                     <label class="levelRadio" for="hard">
-                        <input type="radio" id="hard" name="level" > Hard
+                        <input type="radio" id="hard" value="hard" name="level" > Hard
                     </label>
                 </div>
             </div>
         </div>
 
         <div class="rightContainer container center">
-            <input type="text" placeholder="Enter your guess here...">
+            <div id="suggestion">Select the level of difficulty first</div>
+            <input type="number" id="inputBox" placeholder="Enter your guess here...">
             <button class="button" id="guessBtn">Guess</button>
             <h2 class="subHeading">Hints:</h2>
-            <h5 id="hints">Enter number first.</h5>
+            <h5 id="hints">-</h5>
             <h2 class="subHeading">Guesses left:</h2><div id="guessNumber">10</div>
         </div>
 
-        <div class="winnerContainer center">
+        <div class="outputContainer center" id="winnerContainer">
             <p class="heading">You Won!!</p>
             <button class="button" id="playAgainBtn">Play Again</button>
+        </div>
+        
+        <div class="outputContainer center" id="tryAgainContainer">
+            <p class="heading">You Lose!!</p>
+            <button class="button" id="tryAgainBtn">Try Again</button>
         </div>
     </main>
 </body>
