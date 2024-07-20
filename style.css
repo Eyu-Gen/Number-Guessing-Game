@@ -191,3 +191,45 @@ main{
     display: none;
     background-color: var(--defaultColor);
 }
+
+@media(max-width: 901px) and (min-width: 550px){
+    .levelContainer{
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 550px) {
+    .creator{
+        font-size: 10px;
+        left: 50%;
+        transform: translate(-20%);
+    }
+
+    main{
+        flex-direction: column;
+    }
+
+    .container{
+        width: 100%;
+        height: fit-content;
+    }
+
+    .levelContainer{
+        flex-direction: column;
+    }
+
+    .rightContainer{
+        input[type="number"]{
+            width: 80%;
+        }
+    }
+
+    #tryAgainContainer,
+    #winnerContainer{
+        width: 80%;
+
+        .heading{
+            font-size: 25px;
+        }
+    }
+}

@@ -41,20 +41,7 @@ function easyMode() {
             return;
         }
     
-        // conditionCheck();
-        if (randomNumber > enteredValue) {
-            hints.innerHTML = "Too Low";
-            mainWork();
-        } else if (randomNumber < enteredValue) {
-            hints.innerHTML = "Too High";
-            mainWork();
-        } else if (randomNumber === enteredValue) {
-            winnerContainer.style.display = "flex";
-            blurMain.style.display = "block";
-            playAgainBtn.addEventListener("click", () => {
-                location.reload();
-            })
-        }
+        conditionCheck(enteredValue, randomNumber);
     }); 
 }
 
@@ -71,20 +58,7 @@ function mediumMode() {
             return;
         }
     
-        // conditionCheck();
-        if (randomNumber > enteredValue) {
-            hints.innerHTML = "Too Low";
-            mainWork();
-        } else if (randomNumber < enteredValue) {
-            hints.innerHTML = "Too High";
-            mainWork();
-        } else if (randomNumber === enteredValue) {
-            winnerContainer.style.display = "flex";
-            blurMain.style.display = "block";
-            playAgainBtn.addEventListener("click", () => {
-                location.reload();
-            })
-        }
+        conditionCheck(enteredValue, randomNumber);
     });  
 }
 
@@ -101,38 +75,25 @@ function hardMode() {
             return;
         }
         
-        // conditionCheck();
-        if (randomNumber > enteredValue) {
-            hints.innerHTML = "Too Low";
-            mainWork();
-        } else if (randomNumber < enteredValue) {
-            hints.innerHTML = "Too High";
-            mainWork();
-        } else if (randomNumber === enteredValue) {
-            winnerContainer.style.display = "flex";
-            blurMain.style.display = "block";
-            playAgainBtn.addEventListener("click", () => {
-                location.reload();
-            })
-        }
+        conditionCheck(enteredValue, randomNumber);
     });  
 }
 
-// function conditionCheck() {
-//     if (randomNumber > enteredValue) {
-//         hints.innerHTML = "Too Low";
-//         mainWork();
-//     } else if (randomNumber < enteredValue) {
-//         hints.innerHTML = "Too High";
-//         mainWork();
-//     } else if (randomNumber === enteredValue) {
-//         winnerContainer.style.display = "flex";
-//         blurMain.style.display = "block";
-//         playAgainBtn.addEventListener("click", () => {
-//             location.reload();
-//         })
-//     }
-// }
+function conditionCheck(enteredValue2, randomNumber2) {
+    if (randomNumber2 > enteredValue2) {
+        hints.innerHTML = "Too Low";
+        mainWork();
+    } else if (randomNumber2 < enteredValue2) {
+        hints.innerHTML = "Too High";
+        mainWork();
+    } else if (randomNumber2 === enteredValue2) {
+        winnerContainer.style.display = "flex";
+        blurMain.style.display = "block";
+        playAgainBtn.addEventListener("click", () => {
+            location.reload();
+        })
+    }
+}
 
 function mainWork() {
     count--;
